@@ -1,0 +1,100 @@
+.navWrapper {
+    min-height: 93px;
+    width: 100%;
+    position: fixed;
+
+    nav {
+        max-width: 1880px;
+        height: 92px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        .jungleLogo {
+            height: 42px;
+            min-width: 224px;
+        }
+
+        .links {
+            min-width: 350px;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                margin-top: 8px;
+                text-decoration: none;
+                font-family: CaveatReg;
+                color: black;
+                letter-spacing: 2px;
+                font-size: 25px;
+                padding: 0px 15px;
+                white-space: nowrap;
+            }
+
+            .loginButton {
+            width: 158px;
+            height: 52px;
+            background-color: rgb(255, 217, 114);
+            border-radius: 26px;
+            align-items: center;
+            margin-top: -4px;
+
+            p {
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 8px;
+            }
+        }
+    }
+
+        .navicon {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            display: flex;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    
+    .links {
+            position: fixed;
+            display: none;
+            width: 50%;
+            height: 80%;
+            margin: auto;
+            flex-direction: column;
+            background-color: #F25C54;
+        }
+
+        .navicon {
+            display: flex;
+            flex-direction: column;
+            top: 50px;
+            right: 50px;
+
+            .line {
+                width: 100%;
+                height: 5px;
+                background-color: black;
+                margin: auto;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+.navMobileView {
+    width: 50%;
+    height: 80%;
+
+    .linksMobileView{
+        display: flex;
+    }
+}

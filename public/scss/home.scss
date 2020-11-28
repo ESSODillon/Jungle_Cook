@@ -1,0 +1,77 @@
+.home-background {
+    max-width: 1920px;
+    height: 969px;
+    background-image: url(../images/hero.jpg);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(242,92,84,.6),
+        rgba(242,92,84,.6)
+        ),
+        url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+    .centerCircles {
+        min-width: 442px;
+        height: 425px;
+        position: relative;
+
+        .bigCircle {
+            width: 358px;
+            height: 358px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgb(255, 217, 114);
+            border-radius: 50%;
+            z-index: 3;
+    
+            h1 {
+                width: 227px;
+                height: 24px;
+                font-size: 24;
+                font-family: CaveatBold;
+                margin: 0 auto;
+                margin-top: 100px;
+                margin-left: 90px;
+            }
+    
+            p {
+                text-align: center;
+                height: 80px;
+                width: 166px;
+                font-size: 13px;
+                font-family: LatoReg;
+                letter-spacing: 1.5px;
+                margin: 0 auto;
+                margin-top: 54px;
+            }
+        }
+    
+        .smallCircle {
+            width: 168px;
+            height: 168px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: rgb(252, 188, 184);
+            border-radius: 50%;
+            z-index: 2;
+    
+            p {
+                text-align: center;
+                height: 37px;
+                width: 105px;
+                font-size: 10px;
+                font-family: LatoItalic;
+                letter-spacing: 1.5px;
+                margin: 0 auto;
+                margin-top: 54px;
+            }
+        }
+    }
+}
