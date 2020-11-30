@@ -1,16 +1,7 @@
-var MODEL = (function () {
-    var _getView = function (viewScreen) {
+export function getView(viewScreen) {
 
-        $.get(`/views/${viewScreen}/${viewScreen}.html`, 
-        
-        function (value) {
-            $("#landing").html(value);    
-        });  
+    $.get(`views/${viewScreen}/${viewScreen}.html`,(value) => {
+        $("#app").html(value);    
+    });  
 
-    };
-
-    return {
-        getView: _getView,
-    };
-
-})();
+};
