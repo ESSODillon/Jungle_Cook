@@ -17,12 +17,14 @@
     z-index: 5;
 
     .centerCircles {
-        min-width: 442px;
+        max-width: 442px;
+        width: 100%;
         height: 425px;
         position: relative;
 
         .bigCircle {
-            width: 358px;
+            max-width: 358px;
+            width: 100%;
             height: 358px;
             position: absolute;
             bottom: 0px;
@@ -31,7 +33,8 @@
             z-index: 3;
     
             h1 {
-                width: 227px;
+                max-width: 227px;
+                width: 100%;
                 height: 24px;
                 font-size: 24;
                 font-family: CaveatBold;
@@ -71,6 +74,29 @@
                 letter-spacing: 1.5px;
                 margin: 0 auto;
                 margin-top: 54px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .home-background {
+        .centerCircles {
+            width: 300px;
+
+            .bigCircle {
+                h1 {
+                    margin-left: 60px;
+                }
+            }
+            .smallCircle {
+                width: 121px;
+                p {
+                    width: 80px;
+                    height: 40px;
+                    font-size: 8px;
+                    margin-top: 30px;
+                }
             }
         }
     }

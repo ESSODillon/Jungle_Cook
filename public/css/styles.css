@@ -46,12 +46,14 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 5;
 }
 .home-background .centerCircles {
-  min-width: 442px;
+  max-width: 442px;
+  width: 100%;
   height: 425px;
   position: relative;
 }
 .home-background .centerCircles .bigCircle {
-  width: 358px;
+  max-width: 358px;
+  width: 100%;
   height: 358px;
   position: absolute;
   bottom: 0px;
@@ -60,7 +62,8 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 3;
 }
 .home-background .centerCircles .bigCircle h1 {
-  width: 227px;
+  max-width: 227px;
+  width: 100%;
   height: 24px;
   font-size: 24;
   font-family: CaveatBold;
@@ -99,27 +102,54 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 54px;
 }
 
+@media (max-width: 425px) {
+  .home-background .centerCircles {
+    width: 300px;
+  }
+  .home-background .centerCircles .bigCircle h1 {
+    margin-left: 60px;
+  }
+  .home-background .centerCircles .smallCircle {
+    width: 121px;
+  }
+  .home-background .centerCircles .smallCircle p {
+    width: 80px;
+    height: 40px;
+    font-size: 8px;
+    margin-top: 30px;
+  }
+}
 .navWrapper {
-  min-height: 93px;
+  height: 93px;
+  max-width: 1920px;
   width: 100%;
   position: fixed;
+  z-index: 39;
+  justify-content: space-between;
+}
+.navWrapper .jungleLogo {
+  height: 42px;
+  max-width: 224px;
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .navWrapper nav {
   max-width: 1880px;
+  width: 80%;
   height: 92px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px;
-}
-.navWrapper nav .jungleLogo {
-  height: 42px;
-  min-width: 224px;
+  position: relative;
+  margin-top: -70px;
+  margin-right: 30px;
 }
 .navWrapper nav .links {
   min-width: 350px;
   display: flex;
+  position: absolute;
+  right: 0px;
   justify-content: space-around;
 }
 .navWrapper nav .links a {
@@ -139,6 +169,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 26px;
   align-items: center;
   margin-top: -4px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
 }
 .navWrapper nav .links .loginButton p {
   text-align: center;
@@ -150,23 +181,60 @@ h1, h2, h3, h4, h5, h6, p {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 30px;
+  right: 30px;
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .navWrapper .jungleLogo {
+    width: 160px;
+  }
+  .navWrapper nav {
+    display: flex;
+  }
+  .navWrapper nav .links {
+    position: fixed;
+    display: none;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F25C54;
+  }
+  .navWrapper nav .navicon {
+    display: flex;
+    flex-direction: column;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .navWrapper nav .navicon .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin: auto;
+    border-radius: 3px;
+  }
+}
+.navMobileView .navWrapper nav .links {
   display: flex;
 }
 
 .footerWrapper {
   display: flex;
-  width: 100%;
+  height: 45px;
+  max-width: 1920px;
   margin-top: -50px;
 }
 .footerWrapper footer {
-  width: 1880px;
-  height: 45px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 40;
 }
 .footerWrapper footer .footerCopyright {
   font-family: LatoItalic;
@@ -195,9 +263,46 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 20px;
 }
 
+@media (max-width: 768px) {
+  .footerWrapper footer {
+    display: flex;
+    padding: 0 15px;
+  }
+  .footerWrapper footer .footerCopyright {
+    font-size: 10px;
+  }
+  .footerWrapper footer .footerContent p {
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 515px) {
+  .footerWrapper {
+    height: 95px;
+    margin-top: -100px;
+  }
+  .footerWrapper footer {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+  }
+  .footerWrapper footer .footerContent {
+    position: absolute;
+    bottom: 0px;
+  }
+  .footerWrapper footer .footerContent p {
+    margin-top: 20px;
+    padding: 0px 5px;
+  }
+  .footerWrapper footer .socialLogos {
+    top: 0px;
+    right: 0px;
+    position: absolute;
+  }
+}
 .browse-background {
   max-width: 1920px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url(../images/recipe-hero.jpg);
   background-image: linear-gradient(to bottom, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
   background-position: center;
@@ -206,7 +311,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
 }
 .browse-background .browse-content {
-  width: 100%;
+  width: 90%;
   margin-top: 93px;
   margin-left: 100px;
 }
@@ -217,11 +322,15 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: CaveatBold;
   letter-spacing: 2px;
 }
-.browse-background .browse-content .browse-pizza {
+.browse-background .browse-content .row-one {
+  display: flex;
+  position: relative;
+}
+.browse-background .browse-content .row-one .browse-pizza {
   display: flex;
   margin-top: 50px;
 }
-.browse-background .browse-content .browse-pizza .pizza-img {
+.browse-background .browse-content .row-one .browse-pizza .pizza-img {
   width: 300px;
   height: 263px;
   background-image: url(../images/recipe-pizza.jpg);
@@ -230,7 +339,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
   border-radius: 24px;
 }
-.browse-background .browse-content .browse-pizza .pizza-info {
+.browse-background .browse-content .row-one .browse-pizza .pizza-info {
   width: 224px;
   height: 263px;
   background-color: white;
@@ -239,7 +348,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   text-align: center;
 }
-.browse-background .browse-content .browse-pizza .pizza-info h1 {
+.browse-background .browse-content .row-one .browse-pizza .pizza-info h1 {
   width: 130px;
   height: 20px;
   margin: 0 auto;
@@ -249,13 +358,683 @@ h1, h2, h3, h4, h5, h6, p {
   letter-spacing: 2px;
   border-bottom: 3px solid black;
 }
-.browse-background .browse-content .browse-pizza .pizza-info p {
+.browse-background .browse-content .row-one .browse-pizza .pizza-info p {
   margin: 0 auto;
   margin-top: 19px;
   font-family: LatoReg;
   font-size: 9px;
   width: 138px;
-  height: 55px;
+  height: 70px;
   letter-spacing: 1px;
   text-align: left;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .prep-time {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 19px;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .prep-time img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .prep-time p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .servings {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .servings img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-one .browse-pizza .pizza-info .servings p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-one .browse-burger {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  margin-top: 50px;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-img {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-burger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info {
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info h1 {
+  width: 130px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 15px;
+  font-family: LatoReg;
+  letter-spacing: 2px;
+  border-bottom: 3px solid black;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info p {
+  margin: 0 auto;
+  margin-top: 19px;
+  font-family: LatoReg;
+  font-size: 9px;
+  width: 169px;
+  height: 70px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .prep-time {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 19px;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .prep-time img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .prep-time p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .servings {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .servings img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-one .browse-burger .burger-info .servings p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-two {
+  display: flex;
+  position: relative;
+}
+.browse-background .browse-content .row-two .browse-chicken {
+  display: flex;
+  margin-top: 50px;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-img {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-pilaf.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info {
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info h1 {
+  width: 200px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 15px;
+  font-family: LatoReg;
+  letter-spacing: 2px;
+  border-bottom: 3px solid black;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info p {
+  margin: 0 auto;
+  margin-top: 19px;
+  font-family: LatoReg;
+  font-size: 9px;
+  width: 150px;
+  height: 70px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .prep-time {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 19px;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .prep-time img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .prep-time p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .servings {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .servings img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-two .browse-chicken .chicken-info .servings p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-two .browse-chowmein {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  margin-top: 50px;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-img {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-chowmein.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info {
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info h1 {
+  width: 130px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 15px;
+  font-family: LatoReg;
+  letter-spacing: 2px;
+  border-bottom: 3px solid black;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info p {
+  margin: 0 auto;
+  margin-top: 19px;
+  font-family: LatoReg;
+  font-size: 9px;
+  width: 160px;
+  height: 70px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .prep-time {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 19px;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .prep-time img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .prep-time p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .servings {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .servings img {
+  width: 23px;
+  position: absolute;
+}
+.browse-background .browse-content .row-two .browse-chowmein .chowmein-info .servings p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.browse-background .browse-content .browse_whitespace {
+  height: 100px;
+}
+
+@media (max-width: 1220px) {
+  .browse-background .browse-content {
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .browse-background .browse-content h1 {
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+  .browse-background .browse-content .row-one {
+    display: block;
+  }
+  .browse-background .browse-content .row-one .browse-pizza {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .browse-background .browse-content .row-one .browse-burger {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .browse-background .browse-content .row-two {
+    display: block;
+  }
+  .browse-background .browse-content .row-two .browse-chicken {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .browse-background .browse-content {
+    margin-left: 50px;
+  }
+  .browse-background .browse-content h1 {
+    margin-left: 0px;
+  }
+  .browse-background .browse-content .row-one .browse-pizza {
+    display: block;
+  }
+  .browse-background .browse-content .row-one .browse-pizza .pizza-img {
+    height: 149px;
+    width: 297px;
+  }
+  .browse-background .browse-content .row-one .browse-pizza .pizza-info {
+    width: 297px;
+    height: 167px;
+    margin-top: -50px;
+  }
+  .browse-background .browse-content .row-one .browse-pizza .pizza-info h1 {
+    padding: 10px 0px;
+    font-size: 10px;
+    height: 16px;
+    width: 100px;
+    border-bottom: 2px solid black;
+  }
+  .browse-background .browse-content .row-one .browse-pizza .pizza-info p {
+    width: 180px;
+    font-size: 7px;
+  }
+  .browse-background .browse-content .row-one .browse-pizza .pizza-info .prep-time {
+    margin-top: -19px;
+  }
+  .browse-background .browse-content .row-one .browse-burger {
+    display: block;
+  }
+  .browse-background .browse-content .row-one .browse-burger .burger-img {
+    height: 149px;
+    width: 297px;
+  }
+  .browse-background .browse-content .row-one .browse-burger .burger-info {
+    width: 297px;
+    height: 167px;
+    margin-top: -50px;
+  }
+  .browse-background .browse-content .row-one .browse-burger .burger-info h1 {
+    padding: 10px 0px;
+    font-size: 10px;
+    height: 16px;
+    width: 100px;
+    border-bottom: 2px solid black;
+  }
+  .browse-background .browse-content .row-one .browse-burger .burger-info p {
+    width: 180px;
+    font-size: 7px;
+  }
+  .browse-background .browse-content .row-one .browse-burger .burger-info .prep-time {
+    margin-top: -19px;
+  }
+  .browse-background .browse-content .row-two .browse-chicken {
+    display: block;
+  }
+  .browse-background .browse-content .row-two .browse-chicken .chicken-img {
+    height: 149px;
+    width: 297px;
+  }
+  .browse-background .browse-content .row-two .browse-chicken .chicken-info {
+    width: 297px;
+    height: 167px;
+    margin-top: -50px;
+  }
+  .browse-background .browse-content .row-two .browse-chicken .chicken-info h1 {
+    padding: 10px 0px;
+    font-size: 10px;
+    height: 16px;
+    width: 120px;
+    border-bottom: 2px solid black;
+  }
+  .browse-background .browse-content .row-two .browse-chicken .chicken-info p {
+    width: 180px;
+    font-size: 7px;
+  }
+  .browse-background .browse-content .row-two .browse-chicken .chicken-info .prep-time {
+    margin-top: -19px;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein {
+    display: block;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein .chowmein-img {
+    height: 149px;
+    width: 297px;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein .chowmein-info {
+    width: 297px;
+    height: 167px;
+    margin-top: -50px;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein .chowmein-info h1 {
+    padding: 10px 0px;
+    font-size: 10px;
+    height: 16px;
+    width: 110px;
+    border-bottom: 2px solid black;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein .chowmein-info p {
+    width: 200px;
+    font-size: 7px;
+  }
+  .browse-background .browse-content .row-two .browse-chowmein .chowmein-info .prep-time {
+    margin-top: -19px;
+  }
+}
+.loginWrapper {
+  max-width: 1920px;
+  min-height: 800px;
+  height: 100vh;
+  background-color: #FFD972;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.loginWrapper a {
+  text-decoration: none;
+}
+.loginWrapper h1 {
+  font-family: LatoReg;
+  font-size: 30px;
+  letter-spacing: 3px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.loginWrapper input {
+  width: 100%;
+  height: 18px;
+  border: none;
+  border-bottom: black solid 3px;
+  font-family: LatoReg;
+  font-size: 18px;
+  background-color: #FFD972;
+  font-weight: lighter;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.loginWrapper input:focus {
+  outline: none;
+}
+.loginWrapper ::placeholder {
+  color: black;
+  margin-top: -2px;
+}
+.loginWrapper .loginDiv {
+  width: 209px;
+  height: 284px;
+  display: block;
+  position: relative;
+}
+.loginWrapper .loginDiv .inputwrapper1 {
+  height: 18px;
+  margin-bottom: 50px;
+}
+.loginWrapper .loginDiv .inputwrapper2 {
+  height: 18px;
+}
+.loginWrapper .loginDiv .loginButton2 {
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 26px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  color: black;
+  align-items: center;
+  border-bottom: none;
+  margin-top: 6px;
+  font-family: CaveatReg;
+  font-size: 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.signUpDiv {
+  width: 250px;
+  height: 450px;
+  display: block;
+  position: relative;
+}
+.signUpDiv h2 {
+  font-size: 12px;
+  font-family: LatoItalic;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+.signUpDiv .inputwrapper3 {
+  margin-bottom: 50px;
+}
+.signUpDiv .inputwrapper4 {
+  margin-bottom: 50px;
+}
+.signUpDiv .inputwrapper5 {
+  margin-bottom: 50px;
+}
+.signUpDiv .inputwrapper6 {
+  margin-bottom: 50px;
+}
+.signUpDiv .signUpButton {
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 26px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  border-bottom: none;
+  color: black;
+  align-items: center;
+  margin-top: 6px;
+  font-family: CaveatReg;
+  font-size: 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .loginWrapper {
+    display: block;
+    height: 100%;
+  }
+  .loginWrapper .whitespace {
+    height: 175px;
+  }
+  .loginWrapper .loginDiv {
+    margin: 0 auto;
+    margin-bottom: 115px;
+  }
+  .loginWrapper .signUpDiv {
+    margin: 0 auto;
+  }
+  .loginWrapper .whitespace {
+    height: 175px;
+  }
+}
+.createWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.createWrapper .whitespace {
+  height: 215px;
+}
+.createWrapper h2 {
+  margin-bottom: 80px;
+  font-family: CaveatBold;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.createWrapper h3 {
+  margin-bottom: 35px;
+  font-family: LatoReg;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.createWrapper input:focus {
+  outline: none;
+}
+.createWrapper .inputRows input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: black solid 3px;
+  margin-bottom: 85px;
+  font-family: LatoLight;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.createWrapper .inputRows ::placeholder {
+  color: black;
+}
+.createWrapper .inputRows .createRecipeRow button {
+  position: absolute;
+  top: 0px;
+  background-color: #EFA7A7;
+  cursor: pointer;
+}
+.createWrapper .inputRows .createRecipeRow .lastInput {
+  margin-bottom: 135px;
+}
+.createWrapper .createButton {
+  max-width: 422px;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  background-color: #EFA7A7;
+  border-radius: 26px;
+  font-family: CaveatReg;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.createWrapper .whitespace2 {
+  height: 155px;
 }

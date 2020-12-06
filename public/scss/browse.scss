@@ -1,6 +1,7 @@
 .browse-background {
     max-width: 1920px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/recipe-hero.jpg);
     background-image: linear-gradient(
         to bottom,
@@ -15,7 +16,7 @@
 
     .browse-content{
      
-        width: 100%;
+        width: 90%;
         margin-top: 93px;            
         margin-left: 100px;
 
@@ -28,53 +29,595 @@
             letter-spacing: 2px;
         }
 
-        .browse-pizza {
+        .row-one {
             display: flex;
-            margin-top: 50px;
+            position: relative;
 
+            .browse-pizza {
+                display: flex;
+                margin-top: 50px;
+    
+    
+                .pizza-img {
+                    width: 300px;
+                    height: 263px;
+                    background-image: url(../images/recipe-pizza.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 24px;
+                }
+    
+                .pizza-info {
+                   width: 224px; 
+                   height: 263px;
+                   background-color: white;
+                   border-radius: 24px;
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+    
+                   h1 {
+                       width: 130px;
+                       height: 20px;
+                       margin: 0 auto;
+                       margin-top: 45px;
+                       font-size: 15px;
+                       font-family: LatoReg;
+                       letter-spacing: 2px;
+                       border-bottom: 3px solid black;
+                   }
+    
+                   p {
+                       margin: 0 auto;
+                       margin-top: 19px;
+                       font-family: LatoReg;
+                       font-size: 9px;
+                       width: 138px;
+                       height: 70px;
+                       letter-spacing: 1px;
+                       text-align: left;
+                   }
+    
+                   .prep-time {
+                        margin: 0 auto;
+                        width: 83px;
+                        height: 24.5px;
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        margin-top: 19px;
+    
+                        img {
+                           width: 23px;
+                           position: absolute;
+                        }
+    
+                        p {
+                            height: 12px;
+                            width: 60px;
+                            margin-top: -0.5px;
+                            font-size: 8px;
+                            font-family: LatoReg;
+                            position: absolute;
+                            right: 0px;
+                            text-align: right;
+                        }
+                   }
+    
+                   .servings {
+                    margin: 0 auto;
+                    width: 83px;
+                    height: 24.5px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: 16px;
+    
+                     img {
+                        width: 23px;
+                        position: absolute;
+                     }
+    
+                     p {
+                        height: 12px;
+                        width: 60px;
+                        margin-top: -0.5px;
+                        font-size: 8px;
+                        font-family: LatoReg;
+                        position: absolute;
+                        right: 0px;
+                        text-align: right;
+                     }
+                   }
+    
+                }
+            }   
 
-            .pizza-img {
-                width: 300px;
-                height: 263px;
-                background-image: url(../images/recipe-pizza.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 24px;
-            }
+            .browse-burger {
+                display: flex;
+                position: absolute;
+                right: 0px;
+                margin-top: 50px;
+    
+    
+                .burger-img {
+                    width: 300px;
+                    height: 263px;
+                    background-image: url(../images/recipe-burger.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 24px;
+                }
+    
+                .burger-info {
+                   width: 224px; 
+                   height: 263px;
+                   background-color: white;
+                   border-radius: 24px;
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+    
+                   h1 {
+                       width: 130px;
+                       height: 20px;
+                       margin: 0 auto;
+                       margin-top: 45px;
+                       font-size: 15px;
+                       font-family: LatoReg;
+                       letter-spacing: 2px;
+                       border-bottom: 3px solid black;
+                   }
+    
+                   p {
+                       margin: 0 auto;
+                       margin-top: 19px;
+                       font-family: LatoReg;
+                       font-size: 9px;
+                       width: 169px;
+                       height: 70px;
+                       letter-spacing: 1px;
+                       text-align: left;
+                   }
+    
+                   .prep-time {
+                        margin: 0 auto;
+                        width: 83px;
+                        height: 24.5px;
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        margin-top: 19px;
+    
+                        img {
+                           width: 23px;
+                           position: absolute;
+                        }
+    
+                        p {
+                            height: 12px;
+                            width: 60px;
+                            margin-top: -0.5px;
+                            font-size: 8px;
+                            font-family: LatoReg;
+                            position: absolute;
+                            right: 0px;
+                            text-align: right;
+                        }
+                   }
+    
+                   .servings {
+                    margin: 0 auto;
+                    width: 83px;
+                    height: 24.5px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: 16px;
+    
+                     img {
+                        width: 23px;
+                        position: absolute;
+                     }
+    
+                     p {
+                        height: 12px;
+                        width: 60px;
+                        margin-top: -0.5px;
+                        font-size: 8px;
+                        font-family: LatoReg;
+                        position: absolute;
+                        right: 0px;
+                        text-align: right;
+                     }
+                   }
+    
+                }
+            }   
+        }
 
-            .pizza-info {
-               width: 224px; 
-               height: 263px;
-               background-color: white;
-               border-radius: 24px;
-               align-items: center;
-               justify-content: center;
-               text-align: center;
+        .row-two {
+            display: flex;
+            position: relative;
 
-               h1 {
-                   width: 130px;
-                   height: 20px;
-                   margin: 0 auto;
-                   margin-top: 45px;
-                   font-size: 15px;
-                   font-family: LatoReg;
-                   letter-spacing: 2px;
-                   border-bottom: 3px solid black;
-               }
+            .browse-chicken {
+                display: flex;
+                margin-top: 50px;
+    
+    
+                .chicken-img {
+                    width: 300px;
+                    height: 263px;
+                    background-image: url(../images/recipe-pilaf.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 24px;
+                }
+    
+                .chicken-info {
+                   width: 224px; 
+                   height: 263px;
+                   background-color: white;
+                   border-radius: 24px;
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+    
+                   h1 {
+                       width: 200px;
+                       height: 20px;
+                       margin: 0 auto;
+                       margin-top: 45px;
+                       font-size: 15px;
+                       font-family: LatoReg;
+                       letter-spacing: 2px;
+                       border-bottom: 3px solid black;
+                   }
+    
+                   p {
+                       margin: 0 auto;
+                       margin-top: 19px;
+                       font-family: LatoReg;
+                       font-size: 9px;
+                       width: 150px;
+                       height: 70px;
+                       letter-spacing: 1px;
+                       text-align: left;
+                   }
+    
+                   .prep-time {
+                        margin: 0 auto;
+                        width: 83px;
+                        height: 24.5px;
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        margin-top: 19px;
+    
+                        img {
+                           width: 23px;
+                           position: absolute;
+                        }
+    
+                        p {
+                            height: 12px;
+                            width: 60px;
+                            margin-top: -0.5px;
+                            font-size: 8px;
+                            font-family: LatoReg;
+                            position: absolute;
+                            right: 0px;
+                            text-align: right;
+                        }
+                   }
+    
+                   .servings {
+                    margin: 0 auto;
+                    width: 83px;
+                    height: 24.5px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: 16px;
+    
+                     img {
+                        width: 23px;
+                        position: absolute;
+                     }
+    
+                     p {
+                        height: 12px;
+                        width: 60px;
+                        margin-top: -0.5px;
+                        font-size: 8px;
+                        font-family: LatoReg;
+                        position: absolute;
+                        right: 0px;
+                        text-align: right;
+                     }
+                   }
+    
+                }
+            }   
 
-               p {
-                   margin: 0 auto;
-                   margin-top: 19px;
-                   font-family: LatoReg;
-                   font-size: 9px;
-                   width: 138px;
-                   height: 55px;
-                   letter-spacing: 1px;
-                   text-align: left;
-               }
+            .browse-chowmein {
+                display: flex;
+                position: absolute;
+                right: 0px;
+                margin-top: 50px;
+    
+    
+                .chowmein-img {
+                    width: 300px;
+                    height: 263px;
+                    background-image: url(../images/recipe-chowmein.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 24px;
+                }
+    
+                .chowmein-info {
+                   width: 224px; 
+                   height: 263px;
+                   background-color: white;
+                   border-radius: 24px;
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+    
+                   h1 {
+                       width: 130px;
+                       height: 20px;
+                       margin: 0 auto;
+                       margin-top: 45px;
+                       font-size: 15px;
+                       font-family: LatoReg;
+                       letter-spacing: 2px;
+                       border-bottom: 3px solid black;
+                   }
+    
+                   p {
+                       margin: 0 auto;
+                       margin-top: 19px;
+                       font-family: LatoReg;
+                       font-size: 9px;
+                       width: 160px;
+                       height: 70px;
+                       letter-spacing: 1px;
+                       text-align: left;
+                   }
+    
+                   .prep-time {
+                        margin: 0 auto;
+                        width: 83px;
+                        height: 24.5px;
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        margin-top: 19px;
+    
+                        img {
+                           width: 23px;
+                           position: absolute;
+                        }
+    
+                        p {
+                            height: 12px;
+                            width: 60px;
+                            margin-top: -0.5px;
+                            font-size: 8px;
+                            font-family: LatoReg;
+                            position: absolute;
+                            right: 0px;
+                            text-align: right;
+                        }
+                   }
+    
+                   .servings {
+                    margin: 0 auto;
+                    width: 83px;
+                    height: 24.5px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: 16px;
+    
+                     img {
+                        width: 23px;
+                        position: absolute;
+                     }
+    
+                     p {
+                        height: 12px;
+                        width: 60px;
+                        margin-top: -0.5px;
+                        font-size: 8px;
+                        font-family: LatoReg;
+                        position: absolute;
+                        right: 0px;
+                        text-align: right;
+                     }
+                   }
+    
+                }
+            }   
+        }
 
-            }
-        }   
+        .browse_whitespace {
+            height: 100px;
+        }
     }   
+}
+
+@media (max-width: 1220px) {
+    .browse-background{
+        .browse-content {
+            margin-left: 0px;
+            margin: 0 auto;
+            h1 {
+                margin-left: 100px;
+                margin-bottom: 50px;
+            }
+            .row-one {
+                display: block;
+                .browse-pizza {
+                    margin: 0 auto;
+                    position: relative;
+                    margin-bottom: 40px;
+                    justify-content: center;
+                }
+                .browse-burger {
+                    margin: 0 auto;
+                    position: relative;
+                    margin-bottom: 40px;
+                    justify-content: center;
+
+                }
+            }
+            .row-two  {
+                display: block;
+                .browse-chicken {
+                    margin: 0 auto;
+                    position: relative;
+                    margin-bottom: 40px;
+                    justify-content: center;
+
+                }
+                .browse-chowmein {
+                    margin: 0 auto;
+                    position: relative;
+                    margin-bottom: 40px;
+                    justify-content: center;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .browse-background{
+        .browse-content {
+            margin-left: 50px;
+            h1 {
+                margin-left: 0px;
+            }
+            .row-one {
+                .browse-pizza {
+                    display: block;
+                    .pizza-img{
+                        height: 149px;
+                        width: 297px;
+                    }
+                    .pizza-info {
+                        width: 297px;
+                        height: 167px;
+                        margin-top: -50px;
+                        h1 {
+                            padding: 10px 0px;
+                            font-size: 10px;
+                            height: 16px;
+                            width: 100px;
+                            border-bottom: 2px solid black;
+                        }
+                        p {
+                            width: 180px;
+                            font-size: 7px;
+                        }
+                        .prep-time {
+                            margin-top: -19px;
+                        }
+                    }
+                }
+                .browse-burger {
+
+                    display: block;
+
+                    .burger-img {
+                        height: 149px;
+                        width: 297px;
+                    }
+
+                    .burger-info {
+                        width: 297px;
+                        height: 167px;
+                        margin-top: -50px;
+
+                        h1 {
+                            padding: 10px 0px;
+                            font-size: 10px;
+                            height: 16px;
+                            width: 100px;
+                            border-bottom: 2px solid black;
+                        }
+                        p {
+                            width: 180px;
+                            font-size: 7px;
+                        }
+                        .prep-time {
+                            margin-top: -19px;
+                        }
+                    }
+                }
+            }
+            .row-two  {
+                .browse-chicken {
+                    display: block;
+                    .chicken-img{
+                        height: 149px;
+                        width: 297px;
+                    }
+                    .chicken-info {
+                        width: 297px;
+                        height: 167px;
+                        margin-top: -50px;
+                        h1 {
+                            padding: 10px 0px;
+                            font-size: 10px;
+                            height: 16px;
+                            width: 120px;
+                            border-bottom: 2px solid black;
+                        }
+                        p {
+                            width: 180px;
+                            font-size: 7px;
+                        }
+                        .prep-time {
+                            margin-top: -19px;
+                        }
+                    }
+                }
+                .browse-chowmein {
+                    display: block;
+                    .chowmein-img{
+                        height: 149px;
+                        width: 297px;
+                    }
+                    .chowmein-info {
+                        width: 297px;
+                        height: 167px;
+                        margin-top: -50px;
+                        h1 {
+                            padding: 10px 0px;
+                            font-size: 10px;
+                            height: 16px;
+                            width: 110px;
+                            border-bottom: 2px solid black;
+                        }
+                        p {
+                            width: 200px;
+                            font-size: 7px;
+                        }
+                        .prep-time {
+                            margin-top: -19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
