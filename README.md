@@ -1,2 +1,3 @@
 # Jungle_Cook
- This is my final project for my N315 Class
+
+Firebase Server Link: https://n315-mobileapp.firebaseapp.com/#
