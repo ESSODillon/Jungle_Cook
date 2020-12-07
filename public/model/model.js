@@ -19,7 +19,7 @@ export function initFirebase() {
         }
     });
 }
-
+ 
 export function userSignUp (uName, pWord) {
     firebase
     .auth()

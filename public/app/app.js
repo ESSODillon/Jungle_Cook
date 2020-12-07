@@ -4,18 +4,31 @@ function initListeners() {
 
 
     $("#nav nav a").click(function
-        (e){
+    (e){
 
         var btnID = this.id;
         MODEL.getView(btnID);
 
-        });
+    });
 
-        $(".navicon").click(function(e){
-            $('#nav').toggleClass("navMobileView");
-            $('#nav nav a').toggleClass("navMobileView");
-        })
+    $(".navicon").click(function(e){
+        $('#nav').toggleClass("navMobileView");
+        $('#nav nav a').toggleClass("navMobileView");
+    });
+
+    $(".viewButton").click(function(e) {
+
+    var btnID = this.id;
+    MODEL.getView(btnID);
+
+    });
+
+    $(".editButton").click(function(e) {
+
+        var btnID = this.id;
+        MODEL.getView(btnID);
     
+    });
 }
 
 function initView() {

@@ -2,6 +2,7 @@
 
     width: 80%;
     margin: 0 auto;
+    position: relative;
 
     .whitespace {
         height: 215px;
@@ -44,39 +45,140 @@
     
         .createRecipeRow {
 
-            button {
-                position: absolute;
-                top: 0px;
-                background-color: #EFA7A7;
-                cursor: pointer;
+            .inputwrapper1 {
+
+                position: relative;
+                height: 125px;
+
+                input {
+                    margin-top: 15px;
+                }
+
+                button {
+                    position: absolute;
+                    width: 110px;
+                    height: 36px;
+                    top: 0px;
+                    right: 0px;
+                    font-family: CaveatReg;
+                    font-size: 17px;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    background-color: #EFA7A7;
+                    border-radius: 26px;
+                    border: none;
+                    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+                    cursor: pointer;
+                }
+
+                button:focus {
+                    outline: none;
+                }
             }
     
             .lastInput {
                 margin-bottom: 135px;
             }
         }
+
+        .enterIngredientRow {
+
+            .inputwrapper2 {
+                position: relative;
+                height: 100%;
+
+                input {
+                    margin-top: 15px;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .enterInstructionRow {
+
+            .inputwrapper3 {
+                position: relative;
+                height: 100%;
+
+                input {
+                    margin-top: 15px;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     .createButton {
+        position: absolute;
         max-width: 422px;
         width: 100%;
         min-height: 52px;
-        align-items: center;
         text-align: center;
         border: none;
-        margin: 0 auto;
         cursor: pointer;
         box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
         background-color: #EFA7A7;
         border-radius: 26px;
         font-family: CaveatReg;
         font-size: 25px;
-        letter-spacing: 2px;
-        
+        letter-spacing: 2px; 
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 125px;
+        left: 0;
+        right: 0;
     }
 
     .whitespace2 {
         height: 155px;
     }
+}
 
+@media (max-width: 768px) {
+    .createWrapper {
+        h2 {
+            text-align: center;
+            margin: 0 auto;
+            position: absolute;
+            top: 125px;
+            left: 0px;
+            right: 0px;
+        }
+
+        .inputRows {
+            input {
+                font-size: 16px;
+            }
+
+        .createRecipeRow {
+            button {
+                font-size: 16px;
+            }
+        }
+        }
+
+        .createButton {
+            bottom: 150px;
+        }
+
+        .whitespace2 {
+            height: 200px;
+        }
+    }
 }

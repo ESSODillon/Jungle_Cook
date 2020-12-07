@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: none;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 950px) {
   .navWrapper .jungleLogo {
     width: 160px;
   }
@@ -978,6 +978,7 @@ h1, h2, h3, h4, h5, h6, p {
 .createWrapper {
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 .createWrapper .whitespace {
   height: 215px;
@@ -1010,23 +1011,72 @@ h1, h2, h3, h4, h5, h6, p {
 .createWrapper .inputRows ::placeholder {
   color: black;
 }
-.createWrapper .inputRows .createRecipeRow button {
+.createWrapper .inputRows .createRecipeRow .inputwrapper1 {
+  position: relative;
+  height: 125px;
+}
+.createWrapper .inputRows .createRecipeRow .inputwrapper1 input {
+  margin-top: 15px;
+}
+.createWrapper .inputRows .createRecipeRow .inputwrapper1 button {
   position: absolute;
+  width: 110px;
+  height: 36px;
   top: 0px;
+  right: 0px;
+  font-family: CaveatReg;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-align: center;
   background-color: #EFA7A7;
+  border-radius: 26px;
+  border: none;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+}
+.createWrapper .inputRows .createRecipeRow .inputwrapper1 button:focus {
+  outline: none;
 }
 .createWrapper .inputRows .createRecipeRow .lastInput {
   margin-bottom: 135px;
 }
+.createWrapper .inputRows .enterIngredientRow .inputwrapper2 {
+  position: relative;
+  height: 100%;
+}
+.createWrapper .inputRows .enterIngredientRow .inputwrapper2 input {
+  margin-top: 15px;
+}
+.createWrapper .inputRows .enterIngredientRow .inputwrapper2 img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+.createWrapper .inputRows .enterInstructionRow .inputwrapper3 {
+  position: relative;
+  height: 100%;
+}
+.createWrapper .inputRows .enterInstructionRow .inputwrapper3 input {
+  margin-top: 15px;
+}
+.createWrapper .inputRows .enterInstructionRow .inputwrapper3 img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
 .createWrapper .createButton {
+  position: absolute;
   max-width: 422px;
   width: 100%;
   min-height: 52px;
-  align-items: center;
   text-align: center;
   border: none;
-  margin: 0 auto;
   cursor: pointer;
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
   background-color: #EFA7A7;
@@ -1034,7 +1084,291 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: CaveatReg;
   font-size: 25px;
   letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 125px;
+  left: 0;
+  right: 0;
 }
 .createWrapper .whitespace2 {
   height: 155px;
+}
+
+@media (max-width: 768px) {
+  .createWrapper h2 {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    right: 0px;
+  }
+  .createWrapper .inputRows input {
+    font-size: 16px;
+  }
+  .createWrapper .inputRows .createRecipeRow button {
+    font-size: 16px;
+  }
+  .createWrapper .createButton {
+    bottom: 150px;
+  }
+  .createWrapper .whitespace2 {
+    height: 200px;
+  }
+}
+.your-background {
+  max-width: 1920px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.your-background .your-content {
+  width: 90%;
+  margin-top: 93px;
+  margin-left: 100px;
+}
+.your-background .your-content h1 {
+  height: 32px;
+  margin-top: 93px;
+  font-size: 25px;
+  font-family: CaveatBold;
+  letter-spacing: 2px;
+}
+.your-background .your-content .row-one {
+  display: flex;
+  position: relative;
+}
+.your-background .your-content .row-one .your-pizza {
+  display: flex;
+  margin-top: 50px;
+}
+.your-background .your-content .row-one .your-pizza .pizza-img {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  position: relative;
+}
+.your-background .your-content .row-one .your-pizza .pizza-img a {
+  text-decoration: none;
+}
+.your-background .your-content .row-one .your-pizza .pizza-img .viewButton {
+  width: 127px;
+  height: 42px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+  top: 110px;
+  color: black;
+  background-color: #FFD972;
+  font-family: CaveatReg;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 26px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.your-background .your-content .row-one .your-pizza .pizza-img .viewButton p {
+  margin-top: 10px;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info {
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  border-radius: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info h1 {
+  width: 130px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 15px;
+  font-family: LatoReg;
+  letter-spacing: 2px;
+  border-bottom: 3px solid black;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info p {
+  margin: 0 auto;
+  margin-top: 19px;
+  font-family: LatoReg;
+  font-size: 9px;
+  width: 138px;
+  height: 70px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .prep-time {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 19px;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .prep-time img {
+  width: 23px;
+  position: absolute;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .prep-time p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .servings {
+  margin: 0 auto;
+  width: 83px;
+  height: 24.5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .servings img {
+  width: 23px;
+  position: absolute;
+}
+.your-background .your-content .row-one .your-pizza .pizza-info .servings p {
+  height: 12px;
+  width: 60px;
+  margin-top: -0.5px;
+  font-size: 8px;
+  font-family: LatoReg;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.your-background .your-content .bottom_buttons {
+  display: flex;
+  height: 100px;
+  margin-top: 15px;
+}
+.your-background .your-content .bottom_buttons a {
+  text-decoration: none;
+}
+.your-background .your-content .bottom_buttons .editButton {
+  width: 140px;
+  height: 42px;
+  color: black;
+  background-color: #FFD972;
+  font-family: CaveatReg;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 26px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.your-background .your-content .bottom_buttons .editButton p {
+  margin-top: 10px;
+}
+.your-background .your-content .bottom_buttons .deleteButton {
+  width: 140px;
+  height: 42px;
+  color: black;
+  background-color: #FFD972;
+  font-family: CaveatReg;
+  text-align: center;
+  margin-left: 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 26px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.your-background .your-content .bottom_buttons .deleteButton p {
+  margin-top: 10px;
+}
+.your-background .your-content .your_whitespace {
+  height: 100px;
+}
+
+@media (max-width: 1220px) {
+  .your-background .your-content {
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .your-background .your-content h1 {
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+  .your-background .your-content .row-one {
+    display: block;
+  }
+  .your-background .your-content .row-one .your-pizza {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .your-background .your-content .bottom_buttons {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .your-background .your_top_whitespace {
+    height: 75px;
+  }
+  .your-background .your-content {
+    margin-left: 50px;
+  }
+  .your-background .your-content h1 {
+    margin-left: 0px;
+    font-size: 19px;
+  }
+  .your-background .your-content .row-one .your-pizza {
+    display: block;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-img {
+    height: 149px;
+    width: 297px;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-img .viewButton {
+    top: 50px;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-info {
+    width: 297px;
+    height: 167px;
+    margin-top: -50px;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-info h1 {
+    padding: 10px 0px;
+    font-size: 10px;
+    height: 16px;
+    width: 100px;
+    border-bottom: 2px solid black;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-info p {
+    width: 180px;
+    font-size: 7px;
+  }
+  .your-background .your-content .row-one .your-pizza .pizza-info .prep-time {
+    margin-top: -19px;
+  }
+  .your-background .your-content .bottom_buttons {
+    width: 100%;
+  }
 }
